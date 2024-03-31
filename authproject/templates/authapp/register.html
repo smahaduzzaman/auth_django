@@ -10,7 +10,7 @@
     </div>
     <div class="col-md-6 col-sm-12 my-3">
         <h1>Register</h1>
-        <form method="POST">
+        <form method="POST" action="{% url 'login' %}">
             {% csrf_token %}
             <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
