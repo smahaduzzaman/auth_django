@@ -24,7 +24,9 @@ def login(request):
         messages.error(request, 'Invalid credentials')
         return render(request, 'authapp/login.html')
     
-
 def register(request):
-    
     return render(request, 'authapp/register.html')
+
+def logout(request):
+    auth_logout(request)
+    return render(request, 'authapp/index.html')
