@@ -10,24 +10,33 @@
     </div>
     <div class="col-md-6 col-sm-12 my-3">
         <h1>Register</h1>
-        <form method="POST" action="{% url 'login' %}">
+        <form method="POST" action="{% url 'register' %}">
             {% csrf_token %}
             <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" name="username" required>
+                <input type="text" class="form-control" id="username" name="username" required autocomplete="off">
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="first_name" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="first_name" name="first_name" required autocomplete="off">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="last_name" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="last_name" name="last_name" required autocomplete="off">
+                    </div>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
+                <input type="email" class="form-control" id="email" name="email" required autocomplete="off">
             </div>
             <div class="mb-3">
                 <label for="password1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password1" name="password1" required>
+                <input type="password" class="form-control" id="password1" name="password1" required autocomplete="off">
             </div>
             <div class="mb-3">
-                <label for="password2" class="form-label
-                ">Confirm Password</label>
-                <input type="password" class="form-control" id="password2" name="password2" required>
+                <label for="password2" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="password2" name="password2" required autocomplete="off">
             </div>
             <button type="submit" class="btn btn-primary">Register</button>
         </form>
